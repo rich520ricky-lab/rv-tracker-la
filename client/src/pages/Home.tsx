@@ -20,34 +20,16 @@ interface RVListing {
 }
 
 const SAMPLE_DATA: RVListing[] = [
-  {
-    id: "1",
-    year: 2026,
-    model: "Winnebago",
-    trim: "Solis 59P",
-    price: 109995,
-    msrp: 162593,
-    dealer: "Mike Thompson's RV",
-    location: "Santa Fe Springs, CA",
-    distance: 15,
-    features: ["Pop-top", "Murphy Bed", "A/C"],
-    url: "https://www.mikethompson.com/",
-    lastUpdated: new Date().toISOString(),
-  },
-  {
-    id: "2",
-    year: 2026,
-    model: "Winnebago",
-    trim: "Solis 59P",
-    price: 119995,
-    msrp: 162593,
-    dealer: "La Mesa RV",
-    location: "San Bernardino, CA",
-    distance: 60,
-    features: ["Pop-top", "Murphy Bed", "Solar Ready"],
-    url: "https://www.lamesarv.com/",
-    lastUpdated: new Date().toISOString(),
-  },
+  { id: "1", year: 2026, model: "Winnebago", trim: "Solis 59P", price: 109995, msrp: 162593, dealer: "Mike Thompson's RV", location: "Santa Fe Springs, CA", distance: 15, features: ["Pop-top", "Murphy Bed", "A/C", "Sofa Bed"], url: "https://www.mikethompson.com/", lastUpdated: new Date().toISOString() },
+  { id: "2", year: 2026, model: "Winnebago", trim: "Solis 59P", price: 119995, msrp: 162593, dealer: "La Mesa RV", location: "San Bernardino, CA", distance: 60, features: ["Pop-top", "Murphy Bed", "Solar Ready", "A/C"], url: "https://www.lamesarv.com/", lastUpdated: new Date().toISOString() },
+  { id: "3", year: 2026, model: "Winnebago", trim: "Solis 59P", price: 119990, msrp: 162593, dealer: "Conejo RV", location: "Thousand Oaks, CA", distance: 45, features: ["Pop-top", "Sofa Bed", "Generator", "A/C"], url: "https://www.conejorv.com/", lastUpdated: new Date().toISOString() },
+  { id: "4", year: 2026, model: "Winnebago", trim: "Solis 59PX", price: 119999, msrp: 162593, dealer: "Giant RV", location: "Downey, CA", distance: 20, features: ["Pop-top", "Murphy Bed", "Solar", "A/C", "Backup Camera"], url: "https://giantrv.com/", lastUpdated: new Date().toISOString() },
+  { id: "5", year: 2026, model: "Winnebago", trim: "Solis 59P", price: 105216, msrp: 162593, dealer: "Giant RV", location: "Montclair, CA", distance: 30, features: ["Pop-top", "Murphy Bed", "A/C"], url: "https://giantrv.com/", lastUpdated: new Date().toISOString() },
+  { id: "6", year: 2025, model: "Winnebago", trim: "Solis 59P", price: 104998, msrp: 155000, dealer: "RVUSA Dealer", location: "California", distance: 50, features: ["Pop-top", "Murphy Bed", "A/C", "Used"], url: "https://www.rvusa.com/", lastUpdated: new Date().toISOString() },
+  { id: "7", year: 2026, model: "Winnebago", trim: "Solis 59PX", price: 129998, msrp: 162593, dealer: "La Mesa RV", location: "West Sacramento, CA", distance: 350, features: ["Pop-top", "Murphy Bed", "Solar Ready", "A/C", "Premium Interior"], url: "https://www.lamesarv.com/", lastUpdated: new Date().toISOString() },
+  { id: "8", year: 2027, model: "Winnebago", trim: "Solis 59P", price: 119851, msrp: 165000, dealer: "Conejo RV", location: "Thousand Oaks, CA", distance: 45, features: ["Pop-top", "Murphy Bed", "Generator", "A/C", "New Model"], url: "https://www.conejorv.com/", lastUpdated: new Date().toISOString() },
+  { id: "9", year: 2026, model: "Winnebago", trim: "Solis 59P", price: 109995, msrp: 162593, dealer: "Mike Thompson's RV", location: "Fountain Valley, CA", distance: 25, features: ["Pop-top", "Murphy Bed", "A/C", "Price Reduced"], url: "https://www.rvtrader.com/", lastUpdated: new Date().toISOString() },
+  { id: "10", year: 2026, model: "Winnebago", trim: "Solis 59P", price: 120426, msrp: 162593, dealer: "Multiple Dealers", location: "California", distance: 60, features: ["Pop-top", "Murphy Bed", "A/C"], url: "https://rvs.autotrader.com/", lastUpdated: new Date().toISOString() },
 ];
 
 const DEALER_COLORS: Record<string, string> = {
@@ -135,7 +117,7 @@ export default function Home() {
             Closest
           </Button>
         </div>
-        <div className="text-sm text-muted-foreground">{listings.length} listings</div>
+        <div className="text-sm text-muted-foreground">{listings.length} listings found</div>
       </div>
 
       <div className="container pb-12">
